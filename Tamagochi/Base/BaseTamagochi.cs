@@ -4,15 +4,29 @@ namespace Tamagochi.Base
 {
     public class BaseTamagochi : AttributesTamagochi
     {
-        protected string Name { get; set; }
-        protected double Life { get; set; }
+        internal string Name { get; set; }
+        internal double Life { get; set; }
 
-        protected double MaxLife;
+        private double _maxLife = 0;
+        internal double MaxLife 
+        {
+            get
+            {
+                return _maxLife;
+            } 
+        }
   
-        protected bool IsAlive { get; set; }
+        private bool _isAlive = false;
+        internal bool IsAlive 
+        {
+            get
+            {
+                return _isAlive;
+            }
+        }
 
         private EnumMood _mood = EnumMood.Neutral;
-        protected EnumMood Mood
+        internal EnumMood Mood
         {
             get
             {
@@ -21,7 +35,7 @@ namespace Tamagochi.Base
         }
 
         private EnumLifeCircle _lifeCircle = EnumLifeCircle.Child;
-        private EnumLifeCircle LifeCircle
+        internal EnumLifeCircle LifeCircle
         {
             get 
             {
@@ -29,10 +43,10 @@ namespace Tamagochi.Base
             }
         }
 
-        protected EnumColorTamagochi Color { get; set; }
+        internal EnumColorTamagochi Color { get; set; }
 
         private EnumRarityTamagochi _rarity = EnumRarityTamagochi.None;
-        protected EnumRarityTamagochi Rarity 
+        internal EnumRarityTamagochi Rarity 
         { 
             get 
             { 
@@ -40,32 +54,40 @@ namespace Tamagochi.Base
             } 
         }
 
-        protected void AddLife(int value)
+        internal void AddLife(int value)
         {
             Life += value;
         }
 
-        protected void RemoveLife(int value)
+        internal void RemoveLife(int value)
         {
             Life -= value;
         }
 
-        protected void SetRarity(EnumRarityTamagochi rarity)
+        internal void SetRarity(EnumRarityTamagochi rarity)
         {
             _rarity = rarity;
         }
 
-        protected void SetLifeCircle(EnumLifeCircle lifeCircle)
+        internal void SetLifeCircle(EnumLifeCircle lifeCircle)
         {
             _lifeCircle = lifeCircle;
         }
 
-        protected void SetMood(EnumMood mood)
+        internal void SetMood(EnumMood mood)
         {
             _mood = mood;
         }
+        internal void SetIsAlive(bool isAlive)
+        {
+            _isAlive = isAlive;
+        }
+        internal void SetMaxLife(double maxLife)
+        {
+            _maxLife = maxLife;
+        }
 
-        protected virtual void AddLevelAttribut(EnuAttributesTamagochi enuAtrribute)
+        internal virtual void AddLevelAttribut(EnuAttributesTamagochi enuAtrribute)
         {
             switch (enuAtrribute)
             {
@@ -101,13 +123,13 @@ namespace Tamagochi.Base
                     if (StaminaPoints > StaminaLevel * 64)
                     {
                         SetStamina();
-                        MaxLife += MaxLife * 0.5; 
+                        _maxLife += _maxLife * 0.5; 
                     }
                     break;
             }
         }
 
-        protected virtual void AddPointAttribute(EnuAttributesTamagochi enuAtrribute, int valuePoint)
+        internal virtual void AddPointAttribute(EnuAttributesTamagochi enuAtrribute, int valuePoint)
         {
             switch (enuAtrribute)
             {

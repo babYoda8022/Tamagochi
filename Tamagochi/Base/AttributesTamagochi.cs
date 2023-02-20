@@ -4,7 +4,7 @@ namespace Tamagochi.Base
     public class AttributesTamagochi
     {
         private int _swimLevel = 1;
-        protected int SwimLevel { 
+        internal int SwimLevel { 
             get
             {
                 return _swimLevel;
@@ -12,14 +12,14 @@ namespace Tamagochi.Base
 
         private int _flyLevel = 1;
 
-        protected int FlyLevel { 
+        internal int FlyLevel { 
             get
             {
                 return _flyLevel;
             } }
 
         private int _runLevel = 1;
-        protected int RunLevel
+        internal int RunLevel
         {
             get
             {
@@ -28,14 +28,14 @@ namespace Tamagochi.Base
         }
 
         private int _powerLevel = 1;
-        protected int PowerLevel { 
+        internal int PowerLevel { 
             get
             {
                 return _powerLevel;
             } }
 
         private int _staminaLevel = 1;
-        protected int StaminaLevel
+        internal int StaminaLevel
         {
             get
             {
@@ -43,14 +43,14 @@ namespace Tamagochi.Base
             }
         }
         private int _swimPoints = 0;
-        protected int SwimPoints 
+        internal int SwimPoints 
         { get 
             {
                 return _swimPoints;
             } 
         }
         private int _flyPoints = 0;
-        protected int FlyPoints
+        internal int FlyPoints
         {
             get
             {
@@ -58,7 +58,7 @@ namespace Tamagochi.Base
             }
         }
         private int _runPoints = 0;
-        protected int RunPoints
+        internal int RunPoints
         {
             get
             {
@@ -66,7 +66,7 @@ namespace Tamagochi.Base
             }
         }
         private int _powerPoints = 0;
-        protected int PowerPoints
+        internal int PowerPoints
         {
             get
             {
@@ -74,7 +74,7 @@ namespace Tamagochi.Base
             }
         }
         private int _staminaPoints = 0;
-        protected int StaminaPoints
+        internal int StaminaPoints
         {
             get
             {
@@ -82,44 +82,44 @@ namespace Tamagochi.Base
             }
         }
 
-        protected void SetSwin()
+        internal void SetSwin()
         {
             _swimLevel++;
         }
-        protected void SetFly()
+        internal void SetFly()
         {
             _flyLevel++;
         }
-        protected void SetRun()
+        internal void SetRun()
         {
             _runLevel++;
         }
-        protected void SetPower()
+        internal void SetPower()
         {
             _powerLevel++;
         }
-        protected void SetStamina()
+        internal void SetStamina()
         {
             _staminaLevel++;
         }
 
-        protected void SetSwinPoints(int valuePoints)
+        internal void SetSwinPoints(int valuePoints)
         {
             _swimPoints+= valuePoints;
         }
-        protected void SetFlyPoints(int valuePoints)
+        internal void SetFlyPoints(int valuePoints)
         {
             _flyPoints+= valuePoints;
         }
-        protected void SetRunPoints(int valuePoints)
+        internal void SetRunPoints(int valuePoints)
         {
             _runPoints+= valuePoints;
         }
-        protected void SetPowerPoints(int valuePoints)
+        internal void SetPowerPoints(int valuePoints)
         {
             _powerPoints+= valuePoints;
         }
-        protected void SetStaminaPoints(int valuePoints)
+        internal void SetStaminaPoints(int valuePoints)
         {
             _staminaPoints+= valuePoints;
         }
