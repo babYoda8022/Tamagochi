@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace Tamagochi.Enumerator
 {
     public enum EnuAttributesTamagochi
@@ -14,7 +9,7 @@ namespace Tamagochi.Enumerator
         Power = 3,
         Stamina = 4
     }
-    public enum EnuRarityTamagochi
+    public enum EnumRarityTamagochi
     {
         None = 0,
         Normal = 1,
@@ -24,9 +19,24 @@ namespace Tamagochi.Enumerator
 
     public enum EnumColorTamagochi
     {
-        Standart = 0,
+        Green = 0,
         Blue = 1,
         Red = 2,
-        Green = 3
+        Dark = 3
+    }
+
+    public enum EnumLifeCircle
+    {
+        Child = 0,
+        Teeneger = 1,
+        Adult = 2
+    }
+
+    public enum EnumMood
+    {
+        Neutral = 0,
+        Sad = 1,
+        Angry = 2,
+        Happy = 3
     }
 }

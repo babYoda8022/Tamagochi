@@ -11,11 +11,28 @@ namespace Tamagochi.Base
   
         protected bool IsAlive { get; set; }
 
+        private EnumMood _mood = EnumMood.Neutral;
+        protected EnumMood Mood
+        {
+            get
+            {
+                return _mood;
+            }
+        }
+
+        private EnumLifeCircle _lifeCircle = EnumLifeCircle.Child;
+        private EnumLifeCircle LifeCircle
+        {
+            get 
+            {
+                return _lifeCircle;    
+            }
+        }
+
         protected EnumColorTamagochi Color { get; set; }
 
-        private EnuRarityTamagochi _rarity = EnuRarityTamagochi.None;
-
-        protected EnuRarityTamagochi Rarity 
+        private EnumRarityTamagochi _rarity = EnumRarityTamagochi.None;
+        protected EnumRarityTamagochi Rarity 
         { 
             get 
             { 
@@ -23,19 +40,29 @@ namespace Tamagochi.Base
             } 
         }
 
-        public void AddLife(int value)
+        protected void AddLife(int value)
         {
             Life += value;
         }
 
-        public void RemoveLife(int value)
+        protected void RemoveLife(int value)
         {
             Life -= value;
         }
 
-        protected void SetRarity(EnuRarityTamagochi rarity)
+        protected void SetRarity(EnumRarityTamagochi rarity)
         {
             _rarity = rarity;
+        }
+
+        protected void SetLifeCircle(EnumLifeCircle lifeCircle)
+        {
+            _lifeCircle = lifeCircle;
+        }
+
+        protected void SetMood(EnumMood mood)
+        {
+            _mood = mood;
         }
 
         protected virtual void AddLevelAttribut(EnuAttributesTamagochi enuAtrribute)
@@ -80,7 +107,7 @@ namespace Tamagochi.Base
             }
         }
 
-        protected virtual void AddAttributPoint(EnuAttributesTamagochi enuAtrribute, int valuePoint)
+        protected virtual void AddPointAttribute(EnuAttributesTamagochi enuAtrribute, int valuePoint)
         {
             switch (enuAtrribute)
             {
