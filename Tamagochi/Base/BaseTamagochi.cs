@@ -11,11 +11,11 @@ namespace Tamagochi.Base
   
         protected bool IsAlive { get; set; }
 
-        protected enumColorTamagochi Color { get; set; }
+        protected EnumColorTamagochi Color { get; set; }
 
-        private enuRarityTamagochi _rarity = enuRarityTamagochi.None;
+        private EnuRarityTamagochi _rarity = EnuRarityTamagochi.None;
 
-        protected enuRarityTamagochi Rarity 
+        protected EnuRarityTamagochi Rarity 
         { 
             get 
             { 
@@ -33,49 +33,75 @@ namespace Tamagochi.Base
             Life -= value;
         }
 
-        protected void SetRarity(enuRarityTamagochi rarity)
+        protected void SetRarity(EnuRarityTamagochi rarity)
         {
             _rarity = rarity;
         }
 
-        protected virtual void AddLevelAttribut(enuAttributesTamagochi enuAtrribute)
+        protected virtual void AddLevelAttribut(EnuAttributesTamagochi enuAtrribute)
         {
             switch (enuAtrribute)
             {
-                case enuAttributesTamagochi.Swim:
+                case EnuAttributesTamagochi.Swim:
                     if (SwimPoints > SwimLevel * 64)
                     {
                         SetSwin();
                     }
                     break;
 
-                case enuAttributesTamagochi.Fly:
+                case EnuAttributesTamagochi.Fly:
                     if (FlyPoints > FlyLevel * 64)
                     {
                         SetFly();
                     }
                     break;
 
-                case enuAttributesTamagochi.Run:
+                case EnuAttributesTamagochi.Run:
                     if (RunPoints > RunLevel * 64)
                     {
                         SetRun();
                     }
                     break;
 
-                case enuAttributesTamagochi.Power:
+                case EnuAttributesTamagochi.Power:
                     if (PowerPoints > PowerLevel * 64)
                     {
                         SetPower();
                     }
                     break;
 
-                case enuAttributesTamagochi.Stamina:
+                case EnuAttributesTamagochi.Stamina:
                     if (StaminaPoints > StaminaLevel * 64)
                     {
                         SetStamina();
                         MaxLife += MaxLife * 0.5; 
                     }
+                    break;
+            }
+        }
+
+        protected virtual void AddAttributPoint(EnuAttributesTamagochi enuAtrribute, int valuePoint)
+        {
+            switch (enuAtrribute)
+            {
+                case EnuAttributesTamagochi.Swim:
+                    SetSwinPoints(valuePoint);
+                    break;
+
+                case EnuAttributesTamagochi.Fly:
+                    SetFlyPoints(valuePoint);
+                    break;
+
+                case EnuAttributesTamagochi.Run:
+                    SetRunPoints(valuePoint);
+                    break;
+
+                case EnuAttributesTamagochi.Power:
+                    SetPowerPoints(valuePoint);
+                    break;
+
+                case EnuAttributesTamagochi.Stamina:
+                    SetStaminaPoints(valuePoint);
                     break;
             }
         }

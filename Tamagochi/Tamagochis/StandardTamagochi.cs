@@ -5,11 +5,11 @@ namespace Tamagochi.Tamagochis
 {
     public class StandardTamagochi : BaseTamagochi
     {
-        public StandardTamagochi(string name, double life, enumColorTamagochi color) 
+        public StandardTamagochi(string name, double maxLife, EnumColorTamagochi color) 
         {
             Name = name;
-            MaxLife = life;
-            Life = life;
+            MaxLife= maxLife;
+            Life = maxLife;
             IsAlive = true;
             Color = color;
         }

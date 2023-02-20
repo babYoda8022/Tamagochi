@@ -42,11 +42,45 @@ namespace Tamagochi.Base
                 return _staminaLevel;
             }
         }
-        protected int SwimPoints { get; set; }
-        protected int FlyPoints { get; set; }
-        protected int RunPoints { get; set; }
-        protected int PowerPoints { get; set; }
-        protected int StaminaPoints { get; set; }
+        private int _swimPoints = 0;
+        protected int SwimPoints 
+        { get 
+            {
+                return _swimPoints;
+            } 
+        }
+        private int _flyPoints = 0;
+        protected int FlyPoints
+        {
+            get
+            {
+                return _flyPoints;
+            }
+        }
+        private int _runPoints = 0;
+        protected int RunPoints
+        {
+            get
+            {
+                return _runPoints;
+            }
+        }
+        private int _powerPoints = 0;
+        protected int PowerPoints
+        {
+            get
+            {
+                return _powerPoints;
+            }
+        }
+        private int _staminaPoints = 0;
+        protected int StaminaPoints
+        {
+            get
+            {
+                return _staminaPoints;
+            }
+        }
 
         protected void SetSwin()
         {
@@ -67,6 +101,27 @@ namespace Tamagochi.Base
         protected void SetStamina()
         {
             _staminaLevel++;
+        }
+
+        protected void SetSwinPoints(int valuePoints)
+        {
+            _swimPoints+= valuePoints;
+        }
+        protected void SetFlyPoints(int valuePoints)
+        {
+            _flyPoints+= valuePoints;
+        }
+        protected void SetRunPoints(int valuePoints)
+        {
+            _runPoints+= valuePoints;
+        }
+        protected void SetPowerPoints(int valuePoints)
+        {
+            _powerPoints+= valuePoints;
+        }
+        protected void SetStaminaPoints(int valuePoints)
+        {
+            _staminaPoints+= valuePoints;
         }
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Tamagochi.Enumerator
 {
-    public enum enuAttributesTamagochi
+    public enum EnuAttributesTamagochi
     {
         Swim = 0,
         Fly = 1,
@@ -14,7 +14,7 @@ namespace Tamagochi.Enumerator
         Power = 3,
         Stamina = 4
     }
-    public enum enuRarityTamagochi
+    public enum EnuRarityTamagochi
     {
         None = 0,
         Normal = 1,
@@ -22,7 +22,7 @@ namespace Tamagochi.Enumerator
         SuperRare = 3,
     }
 
-    public enum enumColorTamagochi
+    public enum EnumColorTamagochi
     {
         Standart = 0,
         Blue = 1,
