@@ -7,7 +7,8 @@ namespace Tamagochi.Enumerator
         Fly = 1,
         Run = 2,
         Power = 3,
-        Stamina = 4
+        Stamina = 4,
+        Mood = 5
     }
     public enum EnumRarityTamagochi
     {
@@ -25,18 +26,37 @@ namespace Tamagochi.Enumerator
         Dark = 3
     }
 
-    public enum EnumLifeCircle
+    public enum EnumLifeCircleTamagochi
     {
         Child = 0,
         Teeneger = 1,
-        Adult = 2
+        Revive = 2
     }
 
-    public enum EnumMood
+    public enum EnumMoodTamagochi
     {
         Neutral = 0,
-        Sad = 1,
-        Angry = 2,
-        Happy = 3
+        Happy = 1,
+        Thinking = 2,
+        Excited = 3,
+        Surprised = 4,
+        Angry = 5,
+        Upset = 6,
+        Sleeping = 7
+    }
+
+    public enum EnumPersonalityTamagochi
+    {
+        NoPersonality = 0,
+        Gentle = 1,
+        Energetic = 2,
+        Quiet = 3,
+        BigEater = 4,
+        EasilyBored = 5,
+        Curious = 6,
+        Carefree = 7,
+        CryBaby = 8,
+        Lonely = 9,
+        
     }
 }
