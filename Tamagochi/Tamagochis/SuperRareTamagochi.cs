@@ -1,11 +1,12 @@
 ﻿using Tamagochi.Base;
+using Tamagochi.Enumerator;
 
 namespace Tamagochi.Tamagochis
 {
-    public class StandardTamagochi : BaseTamagochi
+    public class RareTamagochi : BaseTamagochi
     {
-       public StandardTamagochi(string name, int life)
-       {
+        public RareTamagochi(string name, int life)
+        {
             Name = name;
             SetIsAlive(true);
             Life = life;
@@ -13,6 +14,7 @@ namespace Tamagochi.Tamagochis
             SetRandomPersonality();
             SetRandomMood();
             SetRandomColor();
-       }
+            SetRarity(EnumRarityTamagochi.Rare);
+        }
     }
 }

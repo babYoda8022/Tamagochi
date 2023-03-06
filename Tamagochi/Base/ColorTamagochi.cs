@@ -2,14 +2,15 @@
 
 namespace Tamagochi.Base
 {
-    public partial class ColorTamagochi
+    public partial class BaseTamagochi
     {
         internal EnumColorTamagochi _color = EnumColorTamagochi.Blue;
         internal EnumColorTamagochi Color { get { return _color; } }
 
-        internal void SetColor(EnumColorTamagochi color)
+        internal void SetRandomColor()
         {
-            _color = color;
+            int randomColor = new Random().Next(0, 4);
+            _color = (EnumColorTamagochi)randomColor;
         }
     }
 }

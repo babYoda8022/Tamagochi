@@ -15,10 +15,6 @@ namespace Tamagochi.Base
 
         private EnumLifeCircleTamagochi _lifeCycle = EnumLifeCircleTamagochi.Child;
         internal EnumLifeCircleTamagochi LifeCycle { get { return _lifeCycle; } }
-
-        //private EnumRarityTamagochi _rarity = EnumRarityTamagochi.None;
-        //internal EnumRarityTamagochi Rarity { get { return _rarity; } }
-        
         internal void AddLife(int value)
         {
             int difLifeMaxlife = MaxLife - Life;
@@ -37,10 +33,6 @@ namespace Tamagochi.Base
             }
             Life -= value;
         }
-        //internal void SetRarity(EnumRarityTamagochi rarity)
-        //{
-        //    _rarity = rarity;
-        //}
         internal void SetLifeCycle(EnumLifeCircleTamagochi lifeCircle)
         {
             _lifeCycle = lifeCircle;
